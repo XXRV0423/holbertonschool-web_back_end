@@ -10,3 +10,4 @@ function createInt8TypedArray(lenght, position, value) {
 
     return view;
 }
+export default createInt8TypedArray;
