@@ -1,12 +1,12 @@
 function cleanSet(set, startString) {
-    if (!startString) {
+    if (typeof startString !== 'string' || startString === '') {
         return '';
     }
 
     const result = [];
     set.forEach((value) => {
-        if (value.startsWith(startString)) {
-            result.push(value.slice(startString.length));
+        if (typeof value === 'string' && value.startsWith(startString)) {
+        result.push(value.slice(startString.length));
         }
     });
 
