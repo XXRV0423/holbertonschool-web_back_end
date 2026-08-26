@@ -1,5 +1,5 @@
-function celanSet(set, startString) {
-    if (!startingString) {
+function cleanSet(set, startString) {
+    if (!startString) {
         return '';
     }
 
