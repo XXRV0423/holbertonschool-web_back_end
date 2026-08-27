@@ -10,7 +10,7 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
         if (result.status === 'fulfilled') {
             return { status: result.status, value: result.value };
         }
-        return { status: result.status, value: result.reason };
+        return { status: result.status, value: result.reason.toString() };
         });
     });
 }
