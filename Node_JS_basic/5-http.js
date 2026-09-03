@@ -28,14 +28,16 @@ function countStudents(path) {
         fields[field].push(firstname);
       });
 
-      console.log(`Number of students: ${students.length}`);
+      let output = `Number of students: ${students.length}`;
 
       for (const field in fields) {
-        const list = fields[field];
-        console.log(`Number of students in ${field}: ${list.length}. List: ${list.join(', ')}`);
+        if (Object.prototype.hasOwnProperty.call(fields, field)) {
+          const list = fields[field];
+          output += `\nNumber of students in ${field}: ${list.length}. List: ${list.join(', ')}`;
+        }
       }
 
-      resolve();
+      resolve(output);
     });
   });
 }
